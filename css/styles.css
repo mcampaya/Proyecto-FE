@@ -1,0 +1,495 @@
+html {
+    font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px que es el default */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-top: 0.5rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+span {
+    text-decoration: underline dotted;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    justify-content: center;
+    text-align: center;
+    color: #FFFF;
+    text-decoration: none;
+    margin: 0.8rem auto;   
+    font-size: 1.4rem; 
+}
+
+/*Utilidades*/
+
+.centrar-texto {
+    text-align: center;
+}
+
+.ocultar {
+    display: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #FFFF;
+    margin: 1rem;   
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.bt-blanco {
+    border: 1px solid #FFFF;
+    background: none;    
+}
+
+.bt-verde {
+    border: none;
+    background-color: #29A744;
+    color: #FFFF;
+}
+
+.bt-formulario {
+    margin: 0 auto;
+    width: 100%;
+    border: none;
+    background-color: #96C93E;
+    color: #FFFF;
+
+}
+
+/* Header */
+
+.site-header {
+    background-color: #353A40;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #FFFF;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo  {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+    margin: 0 3rem;
+    padding: auto;
+}
+
+.logo a>img {
+    min-width: 6rem; 
+    height: 3.5rem; 
+}
+
+.logo p {
+    margin: 0 2rem;
+}
+
+.mobile-menu {
+    display: block;
+    width: 2rem;
+    margin: 1rem;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-header a:first-child {
+        font-weight: 600;
+    }
+    
+.nav-header a:last-child {
+        color: green;
+}
+
+/* Carrusel */
+
+.carrusel {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+
+/* .slider {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+} */
+
+.slide {
+position: absolute;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center center;
+animation: slide 18s infinite;
+}
+
+.carrusel .slide:nth-child(1) {
+    background-image: url('../img/ba1.jpg');
+    animation-delay: 0s;
+ }
+ 
+.carrusel .slide:nth-child(2) {
+    background-image: url('../img/ba2.jpg');
+    animation-delay: -6s;
+ }
+ 
+ .carrusel .slide:nth-child(3) {
+    background-image: url('../img/ba3.jpg');
+    animation-delay: -12s;
+ }
+
+@keyframes slide {
+    0%, 20%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    35% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    80% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+   }
+
+.container-carrusel {
+    position: absolute;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #FFFF;
+}
+
+.container-carrusel p {
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.botones-carrusel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-oradores {
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.tarjetas-oradores {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    border: 0.2rem solid #DFDFDF;
+    margin: 0.5rem;
+}
+
+.tarjeta img{
+    width: 100%;
+}
+
+
+.tarjeta-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1.5rem 0 1.5rem;
+}
+
+.tarjeta-container p {
+    margin-top: 0;
+}
+
+.etiquetas {
+    display: flex;
+}
+
+.etiqueta {
+    margin: 0 0.3rem 0 0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+}
+
+.javaScript {
+    background-color: #FEC107;
+}
+
+.react {
+    background-color: #17A2B7;
+    color: #FFFF;
+}
+
+.negocios {
+    background-color: #6C757E;
+    color: #FFFF;
+}
+
+.startups {
+    background-color: #DC3546;
+    color: #FFFF;
+}
+
+/* Ubicacion */
+
+.container-ubicacion {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 2rem;
+}
+ 
+.contenido {
+    flex-direction: column;
+    background-color: #333A40;
+    justify-content: center;
+    color: #FFFF;
+    padding: 2rem 3rem;
+}
+
+.contenido button {
+    margin-left: 0;
+}
+
+/* Formulario */
+
+.container-formulario {
+    max-width: 50%;   
+    margin: 0 auto;
+}
+
+fieldset {
+    display: block;
+    padding: 0;
+    margin: 1rem 0;
+    width: 100%;
+    border: none;
+}
+
+input {
+    width: 100%;
+    margin: 0.5rem 0;
+    border: 1px solid  #CFD4DA;
+    border-radius: 0.5rem;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid  #CFD4DA;
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #1D3E51;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.nav-footer {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-footer a {
+    margin: 0;
+    padding: 2rem;
+}
+
+.nav-footer a:last-child {
+    grid-column: 1/3;
+}
+
+/* Celulares */
+@media (min-width: 480px) {
+
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .boton {
+            display: inline-block;
+            flex: 0 0 auto;
+    }
+
+    .container-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    #nav-button {
+        display: contents;
+    }
+
+    .nav-header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-header a {
+        margin: 0 0.8rem;
+    }
+
+    .content {
+        padding: 0 18px;
+        display:contents;
+    }
+    
+
+    .carrusel {
+        height: 60rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        justify-content: end;
+        align-items:center;
+        position: relative;
+    }
+    
+    .container-carrusel {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: end;
+        max-width: 50%;
+        margin-right: 5rem;
+        color: #FFFF;
+    }
+
+    .container-carrusel p {
+        text-align: right;
+        line-height: 2.5rem;
+    }
+    
+    .tarjetas-oradores {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .container-ubicacion {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        margin-top: 2rem;   
+    }
+
+    .container-ubicacion img{
+        max-width: 50%;
+    }
+
+    .contenido {
+        justify-content: start;
+        padding: 1rem;
+        max-width: 50%;
+    }
+
+    .contenido button {
+        display: inline;
+    }
+
+    fieldset {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input {
+        display: flex;
+        flex: 0 0 calc(50% - 1rem);
+        max-width: 50%;
+        margin: 0;
+    }
+
+    .nav-footer {
+        max-width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-footer a {
+        padding: 2.8rem;
+    }
+}
+
+
