@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencia Bs As</title>
+    <link rel="shortcut icon" href="img/codoacodo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container container-header">
+            <div class="logo">
+                <a href="/">
+                   <img src="img/codoacodo.png" alt="codo a codo">
+                </a>
+                <p>Conf Bs As</p>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="#" class="collapsible">
+                    <img src="img/barras.svg" alt="Icono Menu">
+                </a>
+            </div>
+
+            <div id="nav-button">
+                <nav class="nav-header">
+                    <a href="#">La conferencia</a>
+                    <a href="#">Los oradores</a>
+                    <a href="#">El lugar y la fecha</a>
+                    <a href="#">Conviertete en orador</a>
+                    <a href="#">Comprar tickets</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Categorias -->
+    <section class="container">
+
+        <div class="tarjetas">
+            <div class="tarjeta-categoria">
+                <div class="tarjeta-categoria-container">
+                    <h3>Estudiante</h3>
+                    <p>Tienen un descuento <br> <strong>80%</strong></p>
+                    <p class="requisito">* presentar documentación</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-categoria">
+                <div class="tarjeta-categoria-container">
+                    <h3>Trainee</h3>
+                    <p>Tienen un descuento <br> <strong>50%</strong></p>
+                    <p class="requisito">* presentar documentación</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-categoria">
+                <div class="tarjeta-categoria-container">
+                    <h3>Junior</h3>
+                    <p>Tienen un descuento <br> <strong>15%</strong></p>
+                    <p class="requisito">* presentar documentación</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section Datos de la compra -->
+    <section class="container-formulario">
+        <h2 class="centrar-texto">Venta<br><strong>Valor de ticket $<em id="precioTicket"></em></strong></h2>
+
+        <form class="form-container" id="formulario">
+            <fieldset>
+                <input type="text" name="nombre" autocapitalize="words" placeholder="Nombre" id="nombre">
+                <input type="text" name="apellido" autocapitalize="words" placeholder="Apellido" id="apellido">
+            </fieldset>
+            <input type="email" placeholder="Correo" name="email" id="email">
+            <fieldset>
+                <div class="seccion">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" min="1" max="4" step="1" placeholder="Cantidad" name="cantidad" id="cantidad">    
+                </div>
+                <!-- </fieldset>
+            <fieldset> -->
+                <div class="seccion">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="" disabled selected>Seleccionar categoria</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <p class="total">Total a pagar: $<em id="resultado"></em></p>
+            <div class="botones-compra">
+                <button class="button bt-compra-ticket" id="borrar">Borrar</button>
+                <button class="button bt-compra-ticket" id="resumen">Resumen</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <footer class="site-footer tickets-footer">
+        <nav class="nav-footer container">
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Contactános</a>
+            <a href="#">Prensa</a>
+            <a href="#">Conferencias</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Estudiantes</a>
+        </nav>
+    </footer>
+
+    <script src="js/tickets.js"></script>
+</body>
+</html>
